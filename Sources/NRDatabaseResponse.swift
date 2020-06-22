@@ -20,7 +20,6 @@ public protocol JSONDecodeable {
 // MARK: - NRDatabaseResponse
 
 public struct NRDatabaseResponse {
-    
     public let snapshot: DataSnapshot?
     public let reference: DatabaseReference
     public let isCommitted: Bool

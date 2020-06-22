@@ -15,5 +15,4 @@ Pod::Spec.new do |s|
   s.dependency "Firebase/Core"
   s.dependency "Firebase/Database"
   s.dependency "Firebase/Storage"
-  s.dependency "Result", "~> 3.0"
 end
