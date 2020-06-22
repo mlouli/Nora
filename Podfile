@@ -7,5 +7,4 @@ target 'Nora' do
   # Pods for Nora
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Result'
 end

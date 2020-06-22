@@ -8,7 +8,6 @@
 
 import Foundation
 import FirebaseDatabase
-import Result
 
 public typealias DatabaseCompletion = (Result<NRDatabaseResponse, NRError>) -> Void
 public typealias TransactionBlock = (MutableData) -> TransactionResult

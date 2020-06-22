@@ -8,7 +8,6 @@
 
 import Foundation
 import FirebaseStorage
-import Result
 
 public typealias StorageCompletion = (Result<NRStorageResponse, NRError>) -> Void
 
