@@ -48,7 +48,7 @@ public extension NRDatabaseResponse {
     /// Retrieve value for FIRDataSnapshot for specified key
     /// - Parameter key: key to use to look up value in dictionary
     /// - Returns: value for specified key
-    public func mapKey(_ key: String) throws -> Any {
+    func mapKey(_ key: String) throws -> Any {
         
         guard let snapshot = snapshot, snapshot.exists() else {
             throw NRError.nullSnapshot
@@ -68,7 +68,7 @@ public extension NRDatabaseResponse {
     /// Decode the DataSnapshot to a JSONDecodeable type
     /// - Parameter transform: closure that takes in JSON and returns a JSONDecodeable type
     /// - Returns: decoded object
-    public func mapTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> T {
+    func mapTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> T {
         
         guard let snapshot = snapshot, snapshot.exists() else {
             throw NRError.nullSnapshot
@@ -88,7 +88,7 @@ public extension NRDatabaseResponse {
     
     /// Convert the children of a DataSnapshot to JSON
     /// - Returns: an array of the child snapshots as JSON
-    public func childrenAsJSON() throws -> [[String: Any]] {
+    func childrenAsJSON() throws -> [[String: Any]] {
         
         guard let snapshot = snapshot, snapshot.exists() else {
             throw NRError.nullSnapshot
@@ -111,7 +111,7 @@ public extension NRDatabaseResponse {
     /// Decode the children of DataSnapshot to a JSONDecodeable type
     /// - Parameter transform: a closure taking in JSON and returning a JSONDecodeable type
     /// - Returns: an array of decoded objects
-    public func mapChildrenTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> [T] {
+    func mapChildrenTo<T: JSONDecodeable>(_ transform: ([String: Any]) -> T?) throws -> [T] {
         
         let childJSON = try childrenAsJSON()
         
